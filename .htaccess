@@ -1,0 +1,51 @@
+# .htaccess
+RewriteEngine On
+RewriteBase /smp25solokselatan/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+IndexIgnore *.sql 
+
+RewriteRule ^siswa-VII$ dashboard/pages/siswa-VII/index.php [L]
+RewriteRule ^siswa-VIII$ dashboard/pages/siswa-VIII/index.php [L]
+RewriteRule ^siswa-IX$ dashboard/pages/siswa-IX/index.php [L]
+
+RewriteRule ^siswa-IX/get_data_tabel$ dashboard/pages/siswa-IX/get_data_tabel.php [L]
+RewriteRule ^siswa-VII/get_data_tabel$ dashboard/pages/siswa-VII/get_data_tabel.php [L]
+RewriteRule ^siswa-VIII/get_data_tabel$ dashboard/pages/siswa-VIII/get_data_tabel.php [L]
+
+
+RewriteRule ^siswa-VII/tambah$ dashboard/pages/siswa-VII/tambah/index.php [L]
+RewriteRule ^siswa-VIII/tambah$ dashboard/pages/siswa-VIII/tambah/index.php [L]
+RewriteRule ^siswa-IX/tambah$ dashboard/pages/siswa-IX/tambah/index.php [L]
+
+
+RewriteRule ^siswa-teladan$ dashboard/pages/siswa-teladan/index.php [L]
+RewriteRule ^siswa-teladan/tambah-siswa$ dashboard/pages/siswa-teladan/tambah-siswa.php [L]
+# prossess
+RewriteRule ^siswa-teladan/get_lokal_data$ dashboard/pages/siswa-teladan/get_lokal_data.php [L]
+RewriteRule ^siswa-teladan/get_nama_data$ dashboard/pages/siswa-teladan/get_nama_data.php [L]
+RewriteRule ^siswa-teladan/get_data_table$ dashboard/pages/siswa-teladan/get_data_table.php [L]
+
+RewriteRule ^kelas/lokal$ dashboard/pages/kelas/lokal.php [L]
+RewriteRule ^kelas/tambah-siswa$ dashboard/pages/kelas/tambah-siswa.php [L]
+RewriteRule ^kelas/tambah-mapel$ dashboard/pages/kelas/tambah-mapel.php [L]
+RewriteRule ^kelas/edit-siswa$ dashboard/pages/kelas/edit-siswa.php [L]
+
+
+# prosses
+RewriteRule ^kelas/prosses$ dashboard/pages/kelas/prosses.php [L]
+RewriteRule ^kelas/get_lokal_data$ dashboard/pages/kelas/get_lokal_data.php [L]
+
+# RewriteRule ^kelas/prosses$ dashboard/pages/kelas/prosses.php [L]
+
+# prosses siswa
+RewriteRule ^siswa-teladan/prosses$ dashboard/pages/siswa-teladan/prosses.php [L]
+RewriteRule ^siswa-teladan/topsis-prosses$ dashboard/pages/siswa-teladan/topsis_prosses.php [L]
+RewriteRule ^calon-siswa-teladan$ dashboard/pages/siswa-teladan/calon-siswa-teladan.php [L]
+RewriteRule ^calon-siswa-teladan/prosses/topsis$ dashboard/pages/siswa-teladan/calon-siswa-teladan-prosess.php [L]
+RewriteRule ^calon-siswa-teladan/prosses/topsis/start$ dashboard/pages/siswa-teladan/topsis_prosses.php [L]
+
+
+# KELUAR
